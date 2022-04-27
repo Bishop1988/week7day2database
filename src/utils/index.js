@@ -52,8 +52,8 @@ exports.updateAllMovies = async (collection, yargsObj) => {
 
 exports.searchMovies = async (collection, yargsObj) => {
     try {
-        const movie = await collection.findOne({ title: yargsObj.title }).toArray()
-        console.log(movie)
+        const result = await collection.find(yargsObj).toArray()
+        console.log(result)
     } catch (err) {
         console.log(err)
     }
