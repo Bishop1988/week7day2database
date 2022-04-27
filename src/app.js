@@ -1,7 +1,7 @@
 const yargs = require("yargs")
 
 const { connection, client } = require("./db/connection")
-const { addMovie, listMovies, deleteMovie, updateMovie, updateAllMovies, searchMovies } = require("./utils")
+const { addMovie, listMovies, deleteMovie, updateMovie, updateAllMovies, searchMovies, searchMovie } = require("./utils")
 
 const app = async (yargsObj) => {
     const collection = await connection()
@@ -19,9 +19,11 @@ const app = async (yargsObj) => {
     } else if (yargsObj.updateAll) {
         await updateAllMovies(collection, yargsObj)
         console.log("successfully updated document")
-    } else if (yargsObj.searchMovie) {
+    } else if (yargsObj.searchMovies) {
         await searchMovies(collection, { title: yargsObj.title })
         console.log("successfully searched db")
+    } else if (yargsObj.searchMovie) {
+        await searchMovie(collection, { title: yargsObj.title })
     } else {
         console.log("Incorrect Command")
     }

@@ -1,4 +1,3 @@
-
 exports.addMovie = async (collection, yargsObj) => {
     try {
         const addEntry = await collection.insertOne(yargsObj)
@@ -53,6 +52,15 @@ exports.updateAllMovies = async (collection, yargsObj) => {
 exports.searchMovies = async (collection, yargsObj) => {
     try {
         const result = await collection.find(yargsObj).toArray()
+        console.log(result)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+exports.searchMovie = async (collection, yargsObj) => {
+    try {
+        const result = await collection.findOne(yargsObj)
         console.log(result)
     } catch (err) {
         console.log(err)
