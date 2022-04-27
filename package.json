@@ -1,0 +1,25 @@
+{
+  "name": "databaseatlas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bishop1988/week7day2database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bishop1988/week7day2database/issues"
+  },
+  "homepage": "https://github.com/Bishop1988/week7day2database#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongodb": "^4.5.0",
+    "yargs": "^17.4.1"
+  }
+}
